@@ -6,7 +6,15 @@ Some times you need a scratch terminal. tmux-floating-terminal will quickly load
 
 * [tmux](https://github.com/tmux/tmux) >= 3.2
 
-## Installation via [TPM](https://github.com/tmux-plugins/tpm)
+## Supports:
+
+-   Linux
+-  *macOS
+-  *Cygwin
+-  *Windows Subsystem for Linux (WSL)
+* untested, should worki.
+
+## Installation via (recommended) [TPM](https://github.com/tmux-plugins/tpm)
 
 Add plugin to the list of TPM plugins in `~/.tmux.conf`:
 
