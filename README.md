@@ -12,7 +12,8 @@ Some times you need a scratch terminal. tmux-floating-terminal will quickly load
 -  *macOS
 -  *Cygwin
 -  *Windows Subsystem for Linux (WSL)
-* untested, should worki.
+
+\* untested, should work.
 
 ## Installation via (recommended) [TPM](https://github.com/tmux-plugins/tpm)
 
