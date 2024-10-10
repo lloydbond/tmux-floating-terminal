@@ -37,9 +37,9 @@ tmux source-file ~/.tmux.conf
 
 ## Usage
 
-* Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>M</kdd> + <kbd>j</kbd>
-* Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>Shift</kbd> + <kbd>!</kbd>
-* Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>Shift</kbd> + <kbd>@</kbd>
+* Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>alt</kbd> + <kbd>j</kbd>
+* Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>!</kbd>
+* Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>@</kbd>
 
 ## Inspiration / Influence
 
