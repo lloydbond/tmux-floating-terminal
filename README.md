@@ -49,6 +49,8 @@ tmux source-file ~/.tmux.conf
 * Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>alt</kbd> + <kbd>j</kbd>
 * Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>!</kbd>
 * Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>@</kbd>
+* Convert convert current pane into popup scratech <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>$</kbd>
+  - Note: scratch popup must be unused for now. Will improve funcitonality to play fairly in the future.
 
 ## Inspiration / Influence
 
