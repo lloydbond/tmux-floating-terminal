@@ -18,7 +18,7 @@ bind @ if-shell -F '#{!=:#{session_name},floating}' {
 }
 
 bind ^ if-shell -F '#{!=:#{session_name},floating}' {
-    select-pane -m ; popup -d '#{pane_current_path}' -xC -yC -w70% -h70% -E 'new -A -s floating tmux join-pane'
+    select-pane -m ; popup -d '#{pane_current_path}' -xC -yC -w70% -h70% -E 'tmux new -A -s floating tmux join-pane'
 }
 
 
