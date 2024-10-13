@@ -17,7 +17,7 @@ bind @ if-shell -F '#{!=:#{session_name},floating}' {
     run-shell 'bash -c "tmux break-pane -d -s floating -t \"$(tmux show -gvq '@last_session_name'):\""'
 }
 
-bind $ if-shell -F '#{!=:#{session_name},floating}' {
+bind ^ if-shell -F '#{!=:#{session_name},floating}' {
     select-pane -m ; popup -d '#{pane_current_path}' -xC -yC -w70% -h70% -E 'new -A -s floating tmux join-pane'
 }
 
