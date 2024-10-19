@@ -21,7 +21,4 @@ bind ^ if-shell -F '#{!=:#{session_name},floating}' {
     select-pane -m ; popup -d '#{pane_current_path}' -xC -yC -w70% -h70% -E 'tmux new -A -s floating tmux join-pane'
 }
 
-
-
-
-
+bind -N "test key binding" @test-key-binding display-message -p hello tmux
