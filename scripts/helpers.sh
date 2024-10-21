@@ -34,20 +34,6 @@ display_message() {
 	tmux set-option -gq display-time "$saved_display_time"
 }
 
-stored_engine_vars() {
-	tmux show-options -g |
-		grep -i "^@open-" |
-		grep -vi "^@open-editor" |
-		cut -d '-' -f2 |
-		cut -d ' ' -f1 |
-		xargs
-}
-
-get_engine() {
-	local engine_var="$1"
-	tmux show-options -g | grep -i "^@open-$engine_var" | cut -d ' ' -f2 | xargs
-}
-
 tmux_version="$(tmux -V | cut -d ' ' -f 2 | sed 's/next-//'))"
 tmux-is-at-least() {
 	if [[ $tmux_version == $1 ]]
