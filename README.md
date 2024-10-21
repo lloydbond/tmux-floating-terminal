@@ -24,8 +24,8 @@ set -g @plugin 'lloydbond/tmux-floating-terminal'
 
 <optional>
 set -g @floating_scratch_term 'M-i'
-set -g @floating_scratch_to_pane 'M-h'
-set -g @floating_scratch_to_active_pane 'M-l'
+set -g @floating_scratch_to_active_win 'M-h'
+set -g @floating_scratch_to_win 'M-l'
 set -g @floating_active_pane_to_scratch 'M-m'
 
 ```
@@ -53,10 +53,10 @@ tmux source-file ~/.tmux.conf
 
 ## Usage
 
-* Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>alt</kbd> + <kbd>j</kbd>
-* Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>!</kbd>
-* Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>@</kbd>
-* Convert convert current pane into popup scratech <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>$</kbd>
+* Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>alt</kbd> + <kbd>i</kbd>
+* Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>alt</kbd> + <kbd>h</kbd>
+* Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>alt</kbd> + <kbd>l</kbd>
+* Convert convert current pane into popup scratech <kbd>tmux-prefix></kbd> <kbd>alt</kbd> + <kbd>m</kbd>
   - Note: scratch popup must be unused for now. Will improve funcitonality to play fairly in the future.
 
 ## Inspiration / Influence

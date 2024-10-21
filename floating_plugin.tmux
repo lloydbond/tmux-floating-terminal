@@ -4,8 +4,8 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
 default_floating_scratch_term="M-i"
-default_floating_scratch_to_pane="M-h"
-default_floating_scratch_to_active_pane="M-l"
+default_floating_scratch_to_active_win="M-h"
+default_floating_scratch_to_win="M-l"
 default_floating_active_pane_to_scratch="M-m"
 
 set_floating_scratch_term_binding() {
@@ -21,20 +21,20 @@ set_floating_scratch_term_binding() {
 	done
 }
 
-set_floating_scratch_to_pane() {
-	local key_bindings="$(get_tmux_option "@floating_scratch_to_pane" "$default_floating_scratch_to_pane")"
+set_floating_scratch_to_win() {
+	local key_bindings="$(get_tmux_option "@floating_scratch_to_win" "$default_floating_scratch_to_win")"
 	local key
 	for key in $key_bindings; do
 		tmux bind "$key" "if-shell -F '#{!=:#{session_name},floating}' {
 		 break-pane 
 		} {
-		 run-shell 'bash -c "tmux break-pane -s floating -t \"$(tmux show -gvq '@last_session_name'):\""'
+		 run-shell 'bash -c \"tmux break-pane -s floating -t \"$(tmux show -gvq '@last_session_name'):\"\"'
 	 }"
 	done
 }
 
-set_floating_scratch_to_active_pane() {
-	local key_bindings="$(get_tmux_option "@floating_scratch_to_active_pane" "$default_floating_scratch_to_active_pane")"
+set_floating_scratch_to_active_win() {
+	local key_bindings="$(get_tmux_option "@floating_scratch_to_active_win" "$default_floating_scratch_to_active_win")"
 	local key
 	for key in $key_bindings; do
 		tmux bind "$key" "if-shell -F '#{!=:#{session_name},floating}' {
@@ -58,8 +58,8 @@ set_floating_active_pane_to_scratch() {
 
 main() {
 	set_floating_scratch_term_binding
-	set_floating_scratch_to_pane
-	set_floating_scratch_to_active_pane
+	set_floating_scratch_to_active_win
+	set_floating_scratch_to_win
 	set_floating_active_pane_to_scratch
 }
 main
