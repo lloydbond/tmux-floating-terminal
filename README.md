@@ -21,6 +21,13 @@ Add plugin to the list of TPM plugins in `~/.tmux.conf`:
 
 ```
 set -g @plugin 'lloydbond/tmux-floating-terminal'
+
+<optional>
+set -g @floating_scratch_term 'M-i'
+set -g @floating_scratch_to_active_win 'M-h'
+set -g @floating_scratch_to_win 'M-l'
+set -g @floating_active_pane_to_scratch 'M-m'
+
 ```
 Hit <kbd>tmux-prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You should now be able to use the plugin.
 
@@ -35,7 +42,7 @@ git clone https://github.com/lloydbond/tmux-floating-terminal.git ~/.tmux-floati
 Add the following to `.tmux.conf`:
 
 ```
-run-shell ~/.tmux-floating-terminal/tmux-floating-terminal.tmux
+run-shell ~/.tmux-floating-terminal/floating_plugin.tmux
 ```
 
 Reload tmux:
@@ -46,10 +53,10 @@ tmux source-file ~/.tmux.conf
 
 ## Usage
 
-* Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>alt</kbd> + <kbd>j</kbd>
-* Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>!</kbd>
-* Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>@</kbd>
-* Convert convert current pane into popup scratech <kbd>tmux-prefix></kbd> <kbd>shift</kbd> + <kbd>$</kbd>
+* Open/Close scratch terminal <kbd>tmux-prefix</kbd> <kbd>alt</kbd> + <kbd>i</kbd>
+* Convert scratch terminal to active window <kbd>tmux-prefix></kbd> <kbd>alt</kbd> + <kbd>h</kbd>
+* Convert scratch terminal to next-window <kbd>tmux-prefix></kbd> <kbd>alt</kbd> + <kbd>l</kbd>
+* Convert convert current pane into popup scratech <kbd>tmux-prefix></kbd> <kbd>alt</kbd> + <kbd>m</kbd>
   - Note: scratch popup must be unused for now. Will improve funcitonality to play fairly in the future.
 
 ## Inspiration / Influence
