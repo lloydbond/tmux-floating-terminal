@@ -26,7 +26,7 @@ set_floating_scratch_to_win() {
 	local key
 	for key in $key_bindings; do
 		tmux bind "$key" "if-shell -F '#{!=:#{session_name},floating}' {
-		 break-pane 
+		 break-pane -d 
 		} {
 		 run-shell 'bash -c \"tmux break-pane -s floating -t \"$(tmux show -gvq '@last_session_name'):\"\"'
 	 }"
@@ -38,7 +38,7 @@ set_floating_scratch_to_active_win() {
 	local key
 	for key in $key_bindings; do
 		tmux bind "$key" "if-shell -F '#{!=:#{session_name},floating}' {
-		 break-pane -d 
+		 break-pane 
 		 } { 
 		 run-shell 'bash -c \"tmux break-pane -d -s floating -t \"$(tmux show -gvq '@last_session_name'):\"\"'
 	  }"
