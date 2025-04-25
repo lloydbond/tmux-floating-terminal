@@ -1,3 +1,11 @@
+[v1.1.0] 2024-10-21
+-------------------
+
+-   refactor commands to bash script
+-   enable custom key bindings
+-   default keybindings changed to unused tmux bindings,
+      requires major version bump.
+
 [v1.0.0] 2024-10-21
 -------------------
 
