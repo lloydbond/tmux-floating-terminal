@@ -1,3 +1,8 @@
+[v1.1.0] 2025-5-18
+-------------------
+
+-   fixed bug when opening the floating popup initially created from another session.
+
 [v1.0.0] 2024-10-21
 -------------------
 

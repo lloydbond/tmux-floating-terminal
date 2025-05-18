@@ -38,7 +38,6 @@ Clone the repository:
 ```
 git clone https://github.com/lloydbond/tmux-floating-terminal.git ~/.tmux-floating-terminal
 ```
-
 Add the following to `.tmux.conf`:
 
 ```
